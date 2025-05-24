@@ -2,8 +2,12 @@
     <div class="search-bar-container">
         <label for="search-bar" class="search-bar-label">Renseignez vos ingrédients</label>
         <div class="search-bar">
-            <input type="text" id="search-bar" class="search-bar-input" placeholder="Tomates, poulet, ...">
+            <input type="text" id="search-bar" class="search-bar-input" autocomplete="off" placeholder="Tomates, poulet, ..." (input)="handleChange($event)" />
+            <button class="search-bar-button">
+                <span class="pi pi-search"></span>
+            </button>
         </div>
+        <auto-complete-panel />
+        <ingredient-card />
     </div>
-
 </div>
