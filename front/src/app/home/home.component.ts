@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { AutoCompletePanelComponent } from './components/auto-complete-panel/auto-complete-panel.component';
-import { Ingredients } from '../../types/home';
+import { Ingredient } from '../../types/home';
+import { IngredientCardComponent } from './components/ingredient-card/ingredient-card.component';
+import { SearchBarService } from './services/search-bar.service';
 
 const MINIMUM_INGREDIENT_LENGTH = 3;
 
@@ -8,17 +10,29 @@ const MINIMUM_INGREDIENT_LENGTH = 3;
   selector: 'app-home',
   templateUrl: './home.component.html',
   styleUrl: './home.component.less',
-  imports: [AutoCompletePanelComponent]
+  imports: [AutoCompletePanelComponent, IngredientCardComponent]
 })
 export class HomeComponent {
-  newIngredients : Ingredients[] = [];
+  newIngredients : Ingredient[] = [{
+    name: "poulet",
+    id: 1
+  },
+  {
+    name: "poule",
+    id: 2
+  },
+  {
+    name: "poulpe",
+    id: 3
+  }];
 
   handleChange(event : Event) {
     if ((event.target as HTMLInputElement).value.length < MINIMUM_INGREDIENT_LENGTH){
-      this.newIngredients = [];
+      this.searchBarService.setIngredientList([]);
     } else {
-      const newId = Math.floor(Math.random() * 1000);
-      this.newIngredients = [{name: (event.target as HTMLInputElement).value, id: newId}];
+      this.searchBarService.setIngredientList(this.newIngredients);
     }
   }
+
+  constructor(private searchBarService: SearchBarService){}
 }

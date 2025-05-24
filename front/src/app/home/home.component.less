@@ -17,11 +17,12 @@
             height: 60px;
             border-radius: 50px;
             width: 100%;
-            border: 1px solid @titleColor;
 
             display: grid;
             grid-template-columns: 1fr auto;
             align-items: center;
+
+            box-shadow: 0px 4px 34px 8px rgba(0, 0, 0, 0.08);
 
             .search-bar-input {
                 border: none;
@@ -44,6 +45,14 @@
                 margin-right: 4px;
                 border: none;
                 background-color: @primaryColor;
+                display: grid;
+                align-items: center;
+
+                cursor: pointer;
+
+                &:hover {
+                    background-color: #0380bc;
+                }
             }
         }
     

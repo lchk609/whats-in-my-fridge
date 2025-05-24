@@ -1,6 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { Component, Input } from '@angular/core';
-import { Ingredients } from '../../../../types/home';
+import { Ingredient } from '../../../../types/home';
+import { SearchBarService } from '../../services/search-bar.service';
 
 @Component({
   selector: 'auto-complete-panel',
@@ -10,9 +11,17 @@ import { Ingredients } from '../../../../types/home';
 })
 
 export class AutoCompletePanelComponent {
-  @Input() newIngredients : Ingredients[] = [];
+  newIngredients: Ingredient[] = []
 
-  handleClick() {
-    console.log("button clicked");
+  handleClick(ingredient: Ingredient) {
+    this.searchBarService.setIngredientCard(ingredient)
+    const index = this.newIngredients.indexOf(ingredient);
+    this.newIngredients.splice(index, 1);
+  }
+
+  constructor(private searchBarService : SearchBarService) {
+    searchBarService.getIngredientList().subscribe(ingredients => {
+      this.newIngredients = ingredients;
+    })
   }
 }

@@ -1,11 +1,30 @@
+@import '../../../constant.less';
+
 .autocomplete-panel-container {
     width: 50%;
     height: fit-content;
-    border: 1px solid grey;
-    border-radius: 8px;
+    border-radius: 4px;
+    margin-top: 8px;
+    margin-left: 8px;
+    box-shadow: 0 6px 12px rgba(0,0,0,.175);
+
+    display: grid;
 
     .autocomplete-ingredient {
+        height: 32px;
+        line-height: 32px;
+        padding-left: 12px;
+        border-bottom: 1px solid @borderColer;
 
+        cursor: pointer;
+
+        &:last-child {
+            border: none;
+        }
+
+        &:hover {
+            background-color: #80808017;
+        }
     }
 
 }
