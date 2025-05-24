@@ -1,0 +1,5 @@
+<div class="autocomplete-panel-container" *ngIf="newIngredients.length > 0">
+    @for (ingredient of newIngredients; track ingredient.id) {
+        <div class="autocomplete-ingredient" (click)="handleClick()">{{ ingredient.name }}</div>
+    }
+</div>
