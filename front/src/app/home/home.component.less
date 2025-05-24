@@ -15,6 +15,10 @@
             width: 100%;
             border: 1px solid black;
 
+            display: grid;
+            grid-template-columns: 1fr auto;
+            align-items: center;
+
             .search-bar-input {
                 border: none;
                 height: 100%;
@@ -26,6 +30,14 @@
                     border: none;
                     outline: none;
                 }
+            }
+
+            .search-bar-button {
+                display: inline-block;
+                border-radius: 50%;
+                width: 52px;
+                height: 52px;
+                margin-right: 4px;
             }
         }
     
