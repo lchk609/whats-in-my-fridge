@@ -23,5 +23,8 @@ export class AutoCompletePanelComponent {
     searchBarService.getIngredientList().subscribe(ingredients => {
       this.newIngredients = ingredients;
     })
+    searchBarService.restoreIngredientInList().subscribe(ingredient => {
+      this.newIngredients.push(ingredient);
+    })
   }
 }

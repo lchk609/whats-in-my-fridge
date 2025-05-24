@@ -11,8 +11,10 @@ import { SearchBarService } from '../../services/search-bar.service';
 export class IngredientCardComponent {
   ingredientCards: Ingredient[] = [];
 
-  handleClick(ingredientCard) {
-    
+  handleClick(ingredientCard: Ingredient) {
+    const index = this.ingredientCards.indexOf(ingredientCard);
+    this.ingredientCards.splice(index, 1);
+    this.searchBarService.removeIngredientCard(ingredientCard);
   }
 
   constructor(private searchBarService: SearchBarService) { 

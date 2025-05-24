@@ -8,6 +8,7 @@ import { Ingredient } from '../../../types/home';
 export class SearchBarService {
   private ingredientCard = new Subject<Ingredient>();
   private ingredientList = new Subject<Ingredient[]>();
+  private restoreIngredient = new Subject<Ingredient>();
 
   setIngredientList(ingredientList: Ingredient[]) {
     this.ingredientList.next(ingredientList);
@@ -26,7 +27,11 @@ export class SearchBarService {
   }
 
   removeIngredientCard(ingredient: Ingredient) {
-    this
+    this.restoreIngredient.next(ingredient);
+  }
+
+  restoreIngredientInList(): Observable<Ingredient> {
+    return this.restoreIngredient.asObservable();
   }
 
   constructor() { }
