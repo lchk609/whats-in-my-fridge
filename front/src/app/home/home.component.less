@@ -1,0 +1,36 @@
+.home {
+    margin: 0 18px;
+    .search-bar-container {
+        margin: 50px;
+    
+        .search-bar-label {
+            margin: 0 0 8px 20px;
+            align-self: flex-start;
+            display: block;
+        }
+    
+        .search-bar {
+            height: 60px;
+            border-radius: 50px;
+            width: 100%;
+            border: 1px solid black;
+
+            .search-bar-input {
+                border: none;
+                height: 100%;
+                width: calc(100% - 40px);
+                padding: 0 20px;
+                border-radius: 50px;
+
+                &:focus-visible {
+                    border: none;
+                    outline: none;
+                }
+            }
+        }
+    
+        @media (max-width: 728px) {
+            margin: 20px 0 0 0;
+        }
+    }
+}
