@@ -1,3 +1,5 @@
+@import '../constant.less';
+
 .home {
     margin: 0 18px;
     .search-bar-container {
@@ -7,13 +9,20 @@
             margin: 0 0 8px 20px;
             align-self: flex-start;
             display: block;
+            color: @titleColor;
+            font-weight: 600;
         }
     
         .search-bar {
             height: 60px;
             border-radius: 50px;
             width: 100%;
-            border: 1px solid black;
+
+            display: grid;
+            grid-template-columns: 1fr auto;
+            align-items: center;
+
+            box-shadow: 0px 4px 34px 8px rgba(0, 0, 0, 0.08);
 
             .search-bar-input {
                 border: none;
@@ -25,6 +34,24 @@
                 &:focus-visible {
                     border: none;
                     outline: none;
+                }
+            }
+
+            .search-bar-button {
+                display: inline-block;
+                border-radius: 50%;
+                width: 52px;
+                height: 52px;
+                margin-right: 4px;
+                border: none;
+                background-color: @primaryColor;
+                display: grid;
+                align-items: center;
+
+                cursor: pointer;
+
+                &:hover {
+                    background-color: #0380bc;
                 }
             }
         }

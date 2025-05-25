@@ -1,0 +1,21 @@
+@import '../../../constant.less';
+
+.ingredient-card-container {
+    display: flex;
+    gap: 8px;
+    width: fit-content;
+
+    .ingredient-card {
+        display: grid;
+        grid-template-columns: 1fr auto;
+        align-items: center;
+        gap: 8px;
+        padding: 8px;
+        background-color: @primaryColor;
+        border-radius: 8px;
+
+        .pi {
+            cursor: pointer;
+        }
+    }
+}

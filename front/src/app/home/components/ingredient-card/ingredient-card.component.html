@@ -1,0 +1,8 @@
+<div class="ingredient-card-container">
+    @for (ingredientCard of ingredientCards; track ingredientCard.id) {
+        <div class="ingredient-card">
+            <span>{{ ingredientCard.name }}</span>
+            <span class="pi pi-minus-circle" (click)="handleClick(ingredientCard)"></span>
+        </div>
+    }
+</div>
