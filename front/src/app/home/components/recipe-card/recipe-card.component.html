@@ -1,0 +1,10 @@
+<a class="recipe-card-container" href="{{recipeCard.recipeUrl}}" target="_blank">
+    <img src="{{recipeCard.photoUrl}}"/>
+    <div>
+        <div>{{ recipeCard.name }}</div>
+        <div>note: {{ recipeCard.note }}/5 <span>({{ recipeCard.noticeNumber }} avis)</span></div>
+        <div><span class="pi pi-euro"></span> {{ recipeCard.cost }}</div>
+        <div><span class="pi pi-clock"></span> {{ recipeCard.duration }}</div>
+        <div><span class="difficulty-icon {{difficultyClass}}"></span> {{ recipeCard.difficulty }}</div>
+    </div>
+</a>

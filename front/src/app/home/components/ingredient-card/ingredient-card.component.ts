@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Ingredient } from '../../../../types/home';
+import { Ingredient } from '../../../types/home';
 import { SearchBarService } from '../../services/search-bar.service';
 
 @Component({

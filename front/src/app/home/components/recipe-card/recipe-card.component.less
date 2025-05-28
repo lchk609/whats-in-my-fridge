@@ -1,0 +1,45 @@
+@import '../../../constant.less';
+
+.recipe-card-container {
+    display: block;
+    box-shadow: 0px 4px 34px 8px rgba(0, 0, 0, 0.08);
+    border-radius: 8px;
+    text-decoration: none;
+    transition: 0.5s;
+
+    &:hover {
+        scale: 1.05;
+        transition: 0.5s;
+
+    }
+    
+    img {
+        border-radius: 8px 8px 0 0;
+        width: 100%;
+    }
+
+    div {
+        color: @titleColor;
+    }
+
+    .difficulty-icon {
+        width: 20px;
+        height: 20px;
+
+        &.hard {
+            background-image: url('/front/src/assets/images/icons/difficulty-hard.svg');
+        }
+    
+        &.medium {
+            background-image: url('/assets/icons/difficulty-medium.svg');
+        }
+    
+        &.easy {
+            background-image: url('/assets/icons/difficulty-easy.svg');
+        }
+        
+        &.very-easy {
+            background-image: url('/assets/icons/difficulty-very-easy.svg');
+        }
+    }
+}

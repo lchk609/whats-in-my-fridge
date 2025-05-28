@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Observable, Subject } from 'rxjs';
-import { Ingredient } from '../../../types/home';
+import { Ingredient } from '../../types/home';
 
 @Injectable({
   providedIn: 'root',

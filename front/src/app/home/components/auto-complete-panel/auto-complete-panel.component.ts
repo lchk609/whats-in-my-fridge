@@ -1,6 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { Component, Input } from '@angular/core';
-import { Ingredient } from '../../../../types/home';
+import { Ingredient } from '../../../types/home';
 import { SearchBarService } from '../../services/search-bar.service';
 
 @Component({
