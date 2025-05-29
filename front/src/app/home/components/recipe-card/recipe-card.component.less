@@ -22,24 +22,42 @@
         color: @titleColor;
     }
 
-    .difficulty-icon {
-        width: 20px;
-        height: 20px;
+    .recipe-infos-container {
+        padding: 8px;
+        display: grid;
+        gap: 8px;
+                
+        .recipe-infos {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            align-items: center;
+            justify-items: stretch;
+    
+            .difficulty-icon {
+                width: 40px;
+                height: 20px;
+                display: block;
+                background-size: contain;
+                background-repeat: no-repeat;
+                background-position: left;
 
-        &.hard {
-            background-image: url('/front/src/assets/images/icons/difficulty-hard.svg');
-        }
-    
-        &.medium {
-            background-image: url('/assets/icons/difficulty-medium.svg');
-        }
-    
-        &.easy {
-            background-image: url('/assets/icons/difficulty-easy.svg');
-        }
-        
-        &.very-easy {
-            background-image: url('/assets/icons/difficulty-very-easy.svg');
+                &.hard {
+                    background-image: url('/assets/images/icons/difficulty-hard.png');
+                }
+            
+                &.medium {
+                    background-image: url('/assets/images/icons/difficulty-medium.png');
+                }
+            
+                &.easy {
+                    background-image: url('/assets/images/icons/difficulty-easy.png');
+                }
+                
+                &.very-easy {
+                    background-image: url('/assets/images/icons/difficulty-very-easy.png');
+                }
+            }
         }
     }
+
 }

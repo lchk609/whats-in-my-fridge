@@ -35,7 +35,18 @@ export class HomeComponent {
     recipeUrl: "https://www.marmiton.org/recettes/recette_tarte-aux-epinards_18992.aspx#d143921-p1",
     note: 4.3,
     noticeNumber: 219,
-    difficulty: "Difficile",
+    difficulty: "Facile",
+    duration: "40 min",
+    cost: "Bon Marché"
+  },
+  {
+    id: 1,
+    name: "broccoli frits",
+    photoUrl: "https://assets.afcdn.com/recipe/20230630/143921_w600.jpg",
+    recipeUrl: "https://www.marmiton.org/recettes/recette_tarte-aux-epinards_18992.aspx#d143921-p1",
+    note: 4.3,
+    noticeNumber: 219,
+    difficulty: "Moyenne",
     duration: "40 min",
     cost: "Bon Marché"
   },
@@ -57,18 +68,7 @@ export class HomeComponent {
     recipeUrl: "https://www.marmiton.org/recettes/recette_tarte-aux-epinards_18992.aspx#d143921-p1",
     note: 4.3,
     noticeNumber: 219,
-    difficulty: "Difficile",
-    duration: "40 min",
-    cost: "Bon Marché"
-  },
-  {
-    id: 1,
-    name: "broccoli frits",
-    photoUrl: "https://assets.afcdn.com/recipe/20230630/143921_w600.jpg",
-    recipeUrl: "https://www.marmiton.org/recettes/recette_tarte-aux-epinards_18992.aspx#d143921-p1",
-    note: 4.3,
-    noticeNumber: 219,
-    difficulty: "Difficile",
+    difficulty: "Très Facile",
     duration: "40 min",
     cost: "Bon Marché"
   }];
