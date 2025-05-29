@@ -1,5 +1,8 @@
-<div class="autocomplete-panel-container" *ngIf="newIngredients.length > 0">
-    @for (ingredient of newIngredients; track ingredient.id) {
-        <div class="autocomplete-ingredient" (click)="handleClick(ingredient)">{{ ingredient.name }}</div>
-    }
+<div class="ingredients-selection">
+    <div class="autocomplete-panel-container">
+        @for (ingredient of newIngredients; track ingredient.id) {
+            <div class="autocomplete-ingredient" (click)="handleClick(ingredient)">{{ ingredient.name }}</div>
+        }
+    </div>
+    <ingredient-card />
 </div>

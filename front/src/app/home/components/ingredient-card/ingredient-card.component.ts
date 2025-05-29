@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Ingredient } from '../../../../types/home';
+import { Ingredient } from '../../../types/home';
 import { SearchBarService } from '../../services/search-bar.service';
 
 @Component({
@@ -18,7 +18,7 @@ export class IngredientCardComponent {
   }
 
   constructor(private searchBarService: SearchBarService) { 
-    searchBarService.getIngredientCard().subscribe(data => {4
+    searchBarService.getIngredientCard().subscribe(data => {
       this.ingredientCards.push(data)
     })
   }
