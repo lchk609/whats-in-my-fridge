@@ -2,10 +2,11 @@ import { CommonModule } from '@angular/common';
 import { Component, Input } from '@angular/core';
 import { Ingredient } from '../../../types/home';
 import { SearchBarService } from '../../services/search-bar.service';
+import { IngredientCardComponent } from '../ingredient-card/ingredient-card.component';
 
 @Component({
   selector: 'auto-complete-panel',
-  imports: [CommonModule],
+  imports: [CommonModule, IngredientCardComponent],
   templateUrl: './auto-complete-panel.component.html',
   styleUrl: './auto-complete-panel.component.less'
 })
