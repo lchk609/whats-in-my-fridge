@@ -4,6 +4,8 @@ import { Ingredient } from '../types/home';
 import { SearchBarService } from './services/search-bar.service';
 import { RecipeCardComponent } from './components/recipe-card/recipe-card.component';
 import { RecipeCard } from '../types/recipe-card';
+import {MatButtonModule} from '@angular/material/button';
+import {MatIconModule} from '@angular/material/icon';
 
 const MINIMUM_INGREDIENT_LENGTH = 3;
 
@@ -11,7 +13,7 @@ const MINIMUM_INGREDIENT_LENGTH = 3;
   selector: 'app-home',
   templateUrl: './home.component.html',
   styleUrl: './home.component.less',
-  imports: [AutoCompletePanelComponent, RecipeCardComponent]
+  imports: [AutoCompletePanelComponent, RecipeCardComponent, MatButtonModule, MatIconModule]
 })
 export class HomeComponent {
   newIngredients : Ingredient[] = [{

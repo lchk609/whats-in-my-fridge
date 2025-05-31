@@ -4,8 +4,8 @@
             <label for="search-bar" class="search-bar-label">Renseignez vos ingrédients</label>
             <div class="search-bar">
                 <input type="text" id="search-bar" class="search-bar-input" autocomplete="off" placeholder="Tomates, poulet, ..." (input)="handleChange($event)" />
-                <button class="search-bar-filter">
-                    <span class="pi pi-angle-down"></span>
+                <button matFab aria-label="Example icon button with a delete icon">
+                    <mat-icon>keyboard_arrow_down</mat-icon>
                 </button>
                 <button class="search-bar-button">
                     <span class="pi pi-search"></span>
