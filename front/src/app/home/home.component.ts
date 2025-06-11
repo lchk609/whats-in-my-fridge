@@ -1,11 +1,12 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { AutoCompletePanelComponent } from './components/auto-complete-panel/auto-complete-panel.component';
 import { Ingredient } from '../types/home';
 import { SearchBarService } from './services/search-bar.service';
 import { RecipeCardComponent } from './components/recipe-card/recipe-card.component';
 import { RecipeCard } from '../types/recipe-card';
+import {MatDialog, MatDialogModule} from '@angular/material/dialog';
 import {MatButtonModule} from '@angular/material/button';
-import {MatIconModule} from '@angular/material/icon';
+import { FilterModalComponent } from '../shared-components/filter-modal/filter-modal.component';
 
 const MINIMUM_INGREDIENT_LENGTH = 3;
 
@@ -13,12 +14,22 @@ const MINIMUM_INGREDIENT_LENGTH = 3;
   selector: 'app-home',
   templateUrl: './home.component.html',
   styleUrl: './home.component.less',
-  imports: [AutoCompletePanelComponent, RecipeCardComponent, MatButtonModule, MatIconModule]
+  imports: [AutoCompletePanelComponent, RecipeCardComponent, MatButtonModule, FilterModalComponent]
 })
 export class HomeComponent {
+    readonly dialog = inject(MatDialog);
+
   newIngredients : Ingredient[] = [{
     name: "poulet",
     id: 1
+  },
+  {
+    name: "poule",
+    id: 2
+  },
+  {
+    name: "poule",
+    id: 2
   },
   {
     name: "poule",
@@ -80,6 +91,10 @@ export class HomeComponent {
     } else {
       this.searchBarService.setIngredientList(this.newIngredients);
     }
+  }
+
+  filterClick() {
+    const dialogRef = this.dialog.open(FilterModalComponent);
   }
 
   constructor(private searchBarService: SearchBarService){}

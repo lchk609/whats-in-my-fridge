@@ -5,12 +5,17 @@
     grid-template-columns: 1fr 1fr;
     padding: 8px;
     gap: 32px;
+    position: absolute;
+    width: 100%;
+    max-height: 100px;
 
     .autocomplete-panel-container {
         width: 100%;
         height: fit-content;
         border-radius: 4px;
         box-shadow: 0 6px 12px rgba(0,0,0,.175);
+        max-height: inherit;
+        overflow-y: auto;
     
         display: grid;
     
